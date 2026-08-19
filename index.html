@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Tabungan Umroh Bestie - Redirecting...</title>
+  
+  <!-- OPEN GRAPH / SOCIAL MEDIA META TAGS -->
+  <meta property="og:title" content="Tabungan Umroh Bestie">
+  <meta property="og:description" content="Niat Bersama, Melangkah ke Tanah Suci. Klik untuk membuka portal tabungan umroh.">
+  <meta property="og:type" content="website">
+  
+  <!-- FONTS & ICONS -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+  <style>
+    :root {
+      --bg-dark: #0f172a;
+      --card-bg: rgba(30, 41, 59, 0.75);
+      --card-border: rgba(255, 255, 255, 0.12);
+      --gradient-primary: linear-gradient(135deg, #8b5cf6 0%, #ec4899 100%);
+      --text-main: #f8fafc;
+      --text-muted: #94a3b8;
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, sans-serif;
+      background-color: var(--bg-dark);
+      color: var(--text-main);
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 20px;
+      overflow: hidden;
+      background-image: 
+        radial-gradient(circle at 10% 20%, rgba(236, 72, 153, 0.15) 0%, transparent 40%),
+        radial-gradient(circle at 90% 80%, rgba(139, 92, 246, 0.15) 0%, transparent 40%);
+    }
+
+    .wrapper-card {
+      background: var(--card-bg);
+      backdrop-filter: blur(16px);
+      border: 1px solid var(--card-border);
+      border-radius: 24px;
+      padding: 36px 28px;
+      max-width: 420px;
+      width: 100%;
+      text-align: center;
+      box-shadow: 0 20px 50px rgba(0, 0, 0, 0.4);
+      position: relative;
+    }
+
+    .icon-badge {
+      width: 80px;
+      height: 80px;
+      background: var(--gradient-primary);
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin: 0 auto 20px auto;
+      font-size: 2.2rem;
+      color: #ffffff;
+      box-shadow: 0 10px 25px rgba(236, 72, 153, 0.35);
+      animation: pulse 2s infinite ease-in-out;
+    }
+
+    @keyframes pulse {
+      0% { transform: scale(1); box-shadow: 0 10px 25px rgba(236, 72, 153, 0.35); }
+      50% { transform: scale(1.05); box-shadow: 0 15px 35px rgba(236, 72, 153, 0.55); }
+      100% { transform: scale(1); box-shadow: 0 10px 25px rgba(236, 72, 153, 0.35); }
+    }
+
+    .title {
+      font-size: 1.4rem;
+      font-weight: 800;
+      margin-bottom: 8px;
+      letter-spacing: -0.3px;
+    }
+
+    .subtitle {
+      font-size: 0.88rem;
+      color: var(--text-muted);
+      margin-bottom: 24px;
+      line-height: 1.5;
+    }
+
+    .btn-launch {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 10px;
+      width: 100%;
+      padding: 14px 20px;
+      background: var(--gradient-primary);
+      color: #ffffff;
+      font-weight: 700;
+      font-size: 0.95rem;
+      text-decoration: none;
+      border-radius: 14px;
+      box-shadow: 0 8px 20px rgba(139, 92, 246, 0.3);
+      transition: all 0.3s ease;
+    }
+
+    .btn-launch:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 12px 25px rgba(139, 92, 246, 0.45);
+    }
+
+    .redirect-status {
+      margin-top: 18px;
+      font-size: 0.78rem;
+      color: var(--text-muted);
+    }
+
+    .countdown-number {
+      color: #ec4899;
+      font-weight: 800;
+    }
+
+    .footer-note {
+      margin-top: 30px;
+      font-size: 0.72rem;
+      color: #64748b;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="wrapper-card">
+    <div class="icon-badge">
+      <i class="fa-solid fa-kaaba"></i>
+    </div>
+
+    <h1 class="title">Tabungan Umroh Bestie</h1>
+    <p class="subtitle">Niat Bersama, Melangkah ke Tanah Suci.<br>Mengarahkan ke aplikasi utama...</p>
+
+    <a id="btn-target-url" href="#" class="btn-launch">
+      <i class="fa-solid fa-arrow-right-to-bracket"></i> Buka Aplikasi Sekarang
+    </a>
+
+    <div class="redirect-status">
+      Mengalihkan otomatis dalam <span id="countdown" class="countdown-number">3</span> detik...
+    </div>
+
+    <div class="footer-note">
+      Powered by Zettbos Web App Portal
+    </div>
+  </div>
+
+  <script>
+    // =========================================================================
+    // LINK GOOGLE SITE TABUNGAN UMROH BESTIE
+    // =========================================================================
+    var GOOGLE_SITE_URL = "https://sites.google.com/view/tabungan-umroh-bestie/tabungan-umroh";
+
+    var secondsLeft = 3;
+
+    document.addEventListener("DOMContentLoaded", function() {
+      var btnEl = document.getElementById('btn-target-url');
+      var countdownEl = document.getElementById('countdown');
+
+      if (btnEl) btnEl.href = GOOGLE_SITE_URL;
+
+      var timer = setInterval(function() {
+        secondsLeft--;
+        if (countdownEl) countdownEl.innerText = secondsLeft;
+
+        if (secondsLeft <= 0) {
+          clearInterval(timer);
+          window.location.href = GOOGLE_SITE_URL;
+        }
+      }, 1000);
+    });
+  </script>
+</body>
+</html>
